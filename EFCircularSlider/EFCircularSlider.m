@@ -159,6 +159,8 @@ static const CGFloat kFitFrameRadius = -1.0;
     
     // Update the angleFromNorth to match this newly set value
     self.angleFromNorth = (currentValue * 360.0)/(self.maximumValue - self.minimumValue);
+    [self setNeedsLayout];
+    [self setNeedsDisplay];
     [self sendActionsForControlEvents:UIControlEventValueChanged];
 }
 
