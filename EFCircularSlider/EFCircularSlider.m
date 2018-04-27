@@ -525,7 +525,7 @@ static const CGFloat kFitFrameRadius = -1.0;
     CGPoint lastPoint = [touch locationInView:self];
     [self moveHandle:lastPoint];
     
-    _currentValue = (self.angleFromNorth * (self.maximumValue - self.minimumValue)) / 360.0f;
+    _currentValue = (self.angleFromNorth * (self.maximumValue - self.minimumValue)) / 360.0f + self.minimumValue;
     [self sendActionsForControlEvents:UIControlEventValueChanged];
     
     return YES;
